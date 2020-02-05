@@ -1,23 +1,49 @@
-import React from 'react' 
+import React, { useState, useEffect } from 'react' 
 import Timestamp from './Timestamp';
+import TimestampsStore from "../../stores/timestamps"
+import { setTimestamps } from "../../actions/timestamps"
+
 export default (props) => { 
 
-    const changePlace = (a, b) => {
-        props.change({event:"placeswap", data:{a,b}})
+    const [timestamps, setTimestamps] = useState(TimestampsStore.getTimestamps())
+
+    function changeListener() { 
+        setTimestamps(TimestampsStore.getTimestamps())
     }
 
-    const changeStart = (place, time) => { 
-        props.change({event:"timechange", data:{place: place, start:time}})
+    useEffect(()=>{
+        TimestampsStore.on('change', changeListener)
+        return function cleanUp() { 
+            TimestampsStore.removeListener('change', changeListener)
+        }
+    })
+
+    function changeStart() { 
+
     }
-    const changeEnd = (place, time) => { 
-        props.change({event:"timechange", data:{place, end:time}})
+
+    function changeEnd() { 
+
     }
+
+    function changePlace() { 
+
+    }
+
+    window.addit = (a) => { 
+        setTimestamps(a) 
+    }
+
+    console.log("RENDING WITH ", timestamps)
     return(<>
-        {props.data.map( (d) => {
-            console.log('d', d)
-            return (<Timestamp data={d} place={d.place} changePlace={changePlace} changeStart={changeStart} changeEnd={changeEnd}>
-                
-            </Timestamp>)
-        })}
+        {timestamps.map(ts => 
+            <Timestamp place={ts.place} 
+                changeStart={changeStart} 
+                changeEnd={changeEnd} 
+                changePlace={changePlace}
+                data={ts}>
+                hi
+            </Timestamp>
+        )}
     </>);
 }

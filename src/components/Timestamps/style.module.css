@@ -1,0 +1,15 @@
+.timestamp { 
+    padding: 0.5em; 
+    color: var(--color-white);
+    margin: 0.25em; 
+    display: flex; 
+    background-color: var(--color-black);
+}
+
+.timestamp:hover { 
+    background-color: black;
+}
+
+.active { 
+    background-color: red; 
+}

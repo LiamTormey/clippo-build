@@ -3,7 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import Editor from "./pages/editor"
 
+//we need to create out stores -_-
 import TimestampsStore from "./stores/timestamps"
+import VideoStore from "./stores/video"
 
 function App() {
   return (

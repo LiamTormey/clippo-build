@@ -1,6 +1,7 @@
 .editor { 
     display: flex; 
     height: 100%;
+    background-color: var(--color-dark);
 }
 
 /*
@@ -11,15 +12,11 @@
     flex: 0 0 50%;
     display: flex; 
     flex-direction: column;
+    padding: 1em; 
+    box-sizing: border-box;
 }
 
-.upperRight { 
-    flex: 0 0 50%; 
-}
 
-.lowerRight { 
-    flex: 0 0 50%; 
-}
 
 /*
     LEFT 
@@ -32,10 +29,12 @@
 
 .upperLeft { 
     flex: 0 0 50%; 
+    background-color: var(--color-black);
 }
 
 .lowerLeft { 
     flex: 0 0 50%; 
+    background-color: var(--color-black);
 }
 
 /*

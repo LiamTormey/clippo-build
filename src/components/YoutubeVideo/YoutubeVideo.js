@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styleModule from './style.module.css'
 export default (props) => { 
     
-    let videoId = props.videoId || '1cH2cerUpMQ'
+    let videoId = props.videoId 
     let onStateChangeFunction = props.events.onStateChange || (()=>{})
     let onErrorFunction = props.events.onError || (()=>{})
     let onReadyFunction = props.events.onReady || (()=>{})
@@ -17,7 +17,7 @@ export default (props) => {
                     'onError': (e) => {onErrorFunction(e, player)},
                     'onReady': (e) => {
                         const IFRAME = e.target.a
-                        IFRAME.style="width:auto;height:100%"
+                        IFRAME.style="width:100%;height:100%"
                         onReadyFunction(e, player)
                     }
                 } 
