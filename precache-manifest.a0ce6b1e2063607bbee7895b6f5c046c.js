@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5ce87600f800d1ea6becaa055f5276c2",
+    "revision": "a62edb6b2a51d436ac4d4466f5be6c25",
     "url": "/clippo-build/index.html"
   },
   {
-    "revision": "ce7678eb0839489b1724",
+    "revision": "93f2da41bfaf73d2d55f",
     "url": "/clippo-build/static/css/main.e6b76432.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/clippo-build/static/js/2.db9758ea.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ce7678eb0839489b1724",
-    "url": "/clippo-build/static/js/main.2b56dba8.chunk.js"
+    "revision": "93f2da41bfaf73d2d55f",
+    "url": "/clippo-build/static/js/main.8ad11b37.chunk.js"
   },
   {
     "revision": "997993e822d47eab52d1",
