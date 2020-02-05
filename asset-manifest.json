@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/clippo-build/static/css/main.e6b76432.chunk.css",
-    "main.js": "/clippo-build/static/js/main.8ad11b37.chunk.js",
-    "main.js.map": "/clippo-build/static/js/main.8ad11b37.chunk.js.map",
+    "main.css": "/clippo-build/static/css/main.b083a785.chunk.css",
+    "main.js": "/clippo-build/static/js/main.2dbcc052.chunk.js",
+    "main.js.map": "/clippo-build/static/js/main.2dbcc052.chunk.js.map",
     "runtime-main.js": "/clippo-build/static/js/runtime-main.f6754a92.js",
     "runtime-main.js.map": "/clippo-build/static/js/runtime-main.f6754a92.js.map",
-    "static/js/2.db9758ea.chunk.js": "/clippo-build/static/js/2.db9758ea.chunk.js",
-    "static/js/2.db9758ea.chunk.js.map": "/clippo-build/static/js/2.db9758ea.chunk.js.map",
+    "static/js/2.3c8f14d3.chunk.js": "/clippo-build/static/js/2.3c8f14d3.chunk.js",
+    "static/js/2.3c8f14d3.chunk.js.map": "/clippo-build/static/js/2.3c8f14d3.chunk.js.map",
     "index.html": "/clippo-build/index.html",
-    "precache-manifest.a0ce6b1e2063607bbee7895b6f5c046c.js": "/clippo-build/precache-manifest.a0ce6b1e2063607bbee7895b6f5c046c.js",
+    "precache-manifest.df2ed349dedcc1c2aa2887afb2ca73ec.js": "/clippo-build/precache-manifest.df2ed349dedcc1c2aa2887afb2ca73ec.js",
     "service-worker.js": "/clippo-build/service-worker.js",
-    "static/css/main.e6b76432.chunk.css.map": "/clippo-build/static/css/main.e6b76432.chunk.css.map",
-    "static/js/2.db9758ea.chunk.js.LICENSE.txt": "/clippo-build/static/js/2.db9758ea.chunk.js.LICENSE.txt",
+    "static/css/main.b083a785.chunk.css.map": "/clippo-build/static/css/main.b083a785.chunk.css.map",
+    "static/js/2.3c8f14d3.chunk.js.LICENSE.txt": "/clippo-build/static/js/2.3c8f14d3.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/clippo-build/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f6754a92.js",
-    "static/js/2.db9758ea.chunk.js",
-    "static/css/main.e6b76432.chunk.css",
-    "static/js/main.8ad11b37.chunk.js"
+    "static/js/2.3c8f14d3.chunk.js",
+    "static/css/main.b083a785.chunk.css",
+    "static/js/main.2dbcc052.chunk.js"
   ]
 }

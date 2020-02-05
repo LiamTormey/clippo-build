@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/clippo-build/precache-manifest.a0ce6b1e2063607bbee7895b6f5c046c.js"
+  "/clippo-build/precache-manifest.df2ed349dedcc1c2aa2887afb2ca73ec.js"
 );
 
 self.addEventListener('message', (event) => {
