@@ -1,0 +1,52 @@
+.editor { 
+    display: flex; 
+    height: 100%;
+}
+
+/*
+    RIGHT 
+*/
+
+.right { 
+    flex: 0 0 50%;
+    display: flex; 
+    flex-direction: column;
+}
+
+.upperRight { 
+    flex: 0 0 50%; 
+}
+
+.lowerRight { 
+    flex: 0 0 50%; 
+}
+
+/*
+    LEFT 
+*/
+.left { 
+    flex: 0 0 50%; 
+    display: flex; 
+    flex-direction: column;
+}
+
+.upperLeft { 
+    flex: 0 0 50%; 
+}
+
+.lowerLeft { 
+    flex: 0 0 50%; 
+}
+
+/*
+    ALL 
+*/
+
+.right, .left { 
+    overflow: hidden;
+}
+
+.right > .upperRight, .right > .lowerRight, .left > .upperLeft, .left > .lowerLeft { 
+    overflow: hidden;
+    padding: 1em;
+}
