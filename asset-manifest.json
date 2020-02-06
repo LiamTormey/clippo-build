@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/clippo-build/static/css/main.b083a785.chunk.css",
-    "main.js": "/clippo-build/static/js/main.1f0519a4.chunk.js",
-    "main.js.map": "/clippo-build/static/js/main.1f0519a4.chunk.js.map",
+    "main.js": "/clippo-build/static/js/main.231c3b11.chunk.js",
+    "main.js.map": "/clippo-build/static/js/main.231c3b11.chunk.js.map",
     "runtime-main.js": "/clippo-build/static/js/runtime-main.f6754a92.js",
     "runtime-main.js.map": "/clippo-build/static/js/runtime-main.f6754a92.js.map",
-    "static/js/2.04179426.chunk.js": "/clippo-build/static/js/2.04179426.chunk.js",
-    "static/js/2.04179426.chunk.js.map": "/clippo-build/static/js/2.04179426.chunk.js.map",
+    "static/js/2.4c5916df.chunk.js": "/clippo-build/static/js/2.4c5916df.chunk.js",
+    "static/js/2.4c5916df.chunk.js.map": "/clippo-build/static/js/2.4c5916df.chunk.js.map",
     "index.html": "/clippo-build/index.html",
-    "precache-manifest.002021c3e463ed054d293f6702c31da3.js": "/clippo-build/precache-manifest.002021c3e463ed054d293f6702c31da3.js",
+    "precache-manifest.f533fd92203bacd507fce4d1a7f00c15.js": "/clippo-build/precache-manifest.f533fd92203bacd507fce4d1a7f00c15.js",
     "service-worker.js": "/clippo-build/service-worker.js",
     "static/css/main.b083a785.chunk.css.map": "/clippo-build/static/css/main.b083a785.chunk.css.map",
-    "static/js/2.04179426.chunk.js.LICENSE.txt": "/clippo-build/static/js/2.04179426.chunk.js.LICENSE.txt",
+    "static/js/2.4c5916df.chunk.js.LICENSE.txt": "/clippo-build/static/js/2.4c5916df.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/clippo-build/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.f6754a92.js",
-    "static/js/2.04179426.chunk.js",
+    "static/js/2.4c5916df.chunk.js",
     "static/css/main.b083a785.chunk.css",
-    "static/js/main.1f0519a4.chunk.js"
+    "static/js/main.231c3b11.chunk.js"
   ]
 }
