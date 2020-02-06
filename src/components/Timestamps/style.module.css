@@ -4,12 +4,16 @@
     margin: 0.25em; 
     display: flex; 
     background-color: var(--color-black);
+    transition: background-color .25s; 
 }
 
 .timestamp:hover { 
     background-color: black;
+    color: white;
+    
 }
 
 .active { 
-    background-color: red; 
+    background-color: var(--color-primary); 
+    color: var(--color-black);
 }

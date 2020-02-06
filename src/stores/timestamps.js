@@ -7,6 +7,7 @@ class TimestampStore extends EventEmitter {
         super();
         this._timestamps = []  
         this._active = undefined 
+        this._enabled = true 
     }
 
     _cleanPlacement() { 
@@ -47,11 +48,9 @@ class TimestampStore extends EventEmitter {
     _setEnd(place, time) { 
         time = Number(time)
         place = Number(place) 
-        console.log('set end ', place, time)
         const index = this._timestamps.findIndex( (stamp) => {
             return stamp.place == place 
         })
-        console.log("index ", index)
         this._timestamps[index].end = time 
         this.emit('change')
     }
@@ -97,7 +96,16 @@ class TimestampStore extends EventEmitter {
 
     }
 
-    _nextAcitve() { 
+    _setTimestampsEnabled(enabled) { 
+        this._enabled = enabled; 
+        this.emit('change')
+    }
+
+    getEnabled() { 
+        return this._enabled;
+    }
+
+    _nextAcitve(change) { 
         this._cleanPlacement() 
         const lastPlace = this._timestamps[this._timestamps.length -1].place
         const currentPlace = this._active.place 
@@ -109,14 +117,55 @@ class TimestampStore extends EventEmitter {
         });
 
         const nextActivePlace = ( (currentPlace) % (lastPlace) ) + 1
-        console.log('next place is ', nextActivePlace)
 
         this._active = this._timestamps.find( (stamp) => stamp.place == nextActivePlace)
         this._active.active = true 
 
 
-        console.log("CHANGES? ", this._timestamps)
         this._cleanPlacement()
+        if(change == undefined || change == true) { 
+            this.emit('change')
+        }
+        
+    }
+
+    _setTag(place, name, value) { 
+        let unique = true 
+        if(unique) { 
+            this._timestamps.forEach( stamp => {
+                delete stamp[name]
+            })
+        }
+
+        let theTimeStamp = this._timestamps.find( stamp => stamp.place == place); 
+        theTimeStamp[name] = value 
+        console.log(this._timestamps)
+        this.emit('change')
+    }
+
+    getWithTag(name, value) { 
+        let theTimeStamp = this._timestamps.find( (stamp) => stamp[name] == value)
+        return {...theTimeStamp}; 
+    }
+
+    _playTimestamp(place) { 
+        //get rid of the current active 
+        this._active = undefined 
+        this._timestamps.forEach(element => {
+            element.active = false; 
+        });
+
+        let newActive = this._timestamps.find( (stamp) => stamp.place === place)
+        newActive.active = true;
+        this._active = newActive
+        this.emit('change')
+    }
+
+    _removeTimestamp(place) { 
+        this._nextAcitve(false)
+        const removeIndex = this._timestamps.findIndex( (stamp) => stamp.place === place) 
+        this._timestamps.splice(removeIndex, 1) 
+        this._cleanPlacement() 
         this.emit('change')
     }
 
@@ -145,6 +194,22 @@ class TimestampStore extends EventEmitter {
             }
             case "NEXT_ACTIVE": { 
                 this._nextAcitve();
+                break; 
+            }
+            case "SET_TIMESTAMPS_ENABLED": { 
+                this._setTimestampsEnabled(action.enabled); 
+                break; 
+            }
+            case "SET_TIMESTAMP_TAG": { 
+                this._setTag(action.place, action.name, action.value)
+                break; 
+            }
+            case "TIMESTAMP_REMOVE": { 
+                this._removeTimestamp(action.place); 
+                break;
+            }
+            case "TIMESTAMP_PLAY": { 
+                this._playTimestamp(action.place);
                 break; 
             }
             default: { 

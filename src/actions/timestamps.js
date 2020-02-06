@@ -44,4 +44,32 @@ export const nextActive = () => {
     })
 }
 
+export const setTimestampsEnabled = (enabled) => { 
+    Dispatcher.dispatch({
+        type: "SET_TIMESTAMPS_ENABLED", 
+        enabled
+    })
+}
 
+export const setTag = (place, name, value) => { 
+    Dispatcher.dispatch({
+        type: "SET_TIMESTAMP_TAG", 
+        place,
+        name, 
+        value 
+    })
+}
+
+export const removeTimestamp = (place) => { 
+    Dispatcher.dispatch({
+        type: "TIMESTAMP_REMOVE", 
+        place
+    })
+}
+
+export const playTimestamp = (place) => { 
+    Dispatcher.dispatch({
+        type: "TIMESTAMP_PLAY", 
+        place
+    })
+}

@@ -11,6 +11,7 @@ export default (props) => {
         setTimestamps(TimestampsStore.getTimestamps())
     }
 
+
     useEffect(()=>{
         TimestampsStore.on('change', changeListener)
         return function cleanUp() { 
@@ -30,11 +31,6 @@ export default (props) => {
 
     }
 
-    window.addit = (a) => { 
-        setTimestamps(a) 
-    }
-
-    console.log("RENDING WITH ", timestamps)
     return(<>
         {timestamps.map(ts => 
             <Timestamp place={ts.place} 

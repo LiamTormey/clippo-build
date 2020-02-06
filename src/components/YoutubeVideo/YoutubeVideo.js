@@ -35,7 +35,6 @@ export default (props) => {
     }
 
     const videoRefLoaded = () => { 
-        console.log("VIDEO REF LOADED")
         init() 
         setUpHandler() 
     }

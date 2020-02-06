@@ -1,0 +1,34 @@
+.inputField { 
+    display: flex; 
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+.inputTitle { 
+    flex: 0 0 10%; 
+}
+
+.inputValue { 
+    flex: 0 0 90%; 
+    background-color: var(--color-dark);
+    border-color: var(--color-primary);
+    border-style: solid;
+    box-shadow: none;
+    color: white; 
+    padding-left: 1em;
+    box-sizing: border-box;
+}
+
+.tag { 
+    background-color: var(--color-black);
+    color: var(--color-primary);
+    width: auto;
+    padding: 5px; 
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--color-black);
+    text-align: center;
+    margin-right: 0.5em;
+    font-weight: 700;
+}

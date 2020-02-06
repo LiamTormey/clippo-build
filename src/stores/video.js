@@ -8,19 +8,37 @@ class VideoStore extends EventEmitter {
     }
 
 
+    getVideoID() { 
+        if(this._videoPlayer == undefined) return undefined 
+        try { 
+            const theURL = new URL(this._videoPlayer.getVideoUrl())
+            return theURL.searchParams.get('v')
+        } catch(e) { 
+            return undefined; 
+        }
+    }
+
     _setVideoPlayer(player) { 
         this._videoPlayer = player; 
+        if(this._videoID) { 
+            this._setVideoID(this._videoID)
+            this._videoID = undefined; 
+            return; //_setVideoID should emit change for us 
+        }
         this.emit('change')
     }
 
     _setVideoID(id) { 
-        if(this._videoPlayer == undefined) { console.error("THERE IS NOT VIDEO PLAYER IN STORE"); return }
+        this._videoID = id; 
+        //if our player isnt ready, queue the video id and the video will load it on _setVideoPlayer(player) 
+        if(this._videoPlayer == undefined) { 
+            return; 
+        }
         this._videoPlayer.loadVideoById(id)
         this.emit('change')
     }
 
     handleAction(action) { 
-        console.log("GOT ACTION?11", action)
         switch(action.type) { 
             case "SET_VIDEO_PLAYER": { 
                 this._setVideoPlayer(action.player)
